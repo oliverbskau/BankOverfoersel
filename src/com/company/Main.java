@@ -25,7 +25,7 @@ public class Main {
 
             case "nej":
                 System.out.print("\nIndtast fulde navn: ");
-                Account.setOwnerName() = in.nextLine();
+                Account.setOwnerName = in.nextLine();
                 break;
         }
 

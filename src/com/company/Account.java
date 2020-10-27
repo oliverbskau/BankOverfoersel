@@ -2,6 +2,7 @@ package com.company;
 
 public class Account {
 
+    public static String setOwnerName;
     String accountNumber;
     String ownerName;
     double balance;
