@@ -1,5 +1,6 @@
 package com.company;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
 
@@ -26,6 +27,8 @@ public class Main {
             case "nej":
                 System.out.print("\nIndtast fulde navn: ");
                 Account.setOwnerName = in.nextLine();
+                Random random = new Random();
+                Account.setBalance = 1000+random.nextDouble();
                 break;
         }
 
