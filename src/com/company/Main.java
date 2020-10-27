@@ -6,6 +6,11 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
 
+        Main main = new Main();
+        main.startProgram();
+    }
+
+    public void startProgram(){
         Scanner in = new Scanner(System.in);
         int choice = 0;
         System.out.println("Er du oprættet i systemet?");
@@ -22,11 +27,10 @@ public class Main {
                 System.out.print("\nIndtast fulde navn: ");
                 Account.setOwnerName() = in.nextLine();
                 break;
-
-
         }
 
     }
+
 
     public static void menu(){
 
