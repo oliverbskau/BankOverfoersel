@@ -6,6 +6,7 @@ public class Database {
 
     private ArrayList<Account> database = new ArrayList<Account>();
     private double addAmount;
+    private double withdraw;
 
     public void add(String ownerName, String accountNumber,double balance){
         Account account = new Account(ownerName, accountNumber, balance);
@@ -27,7 +28,7 @@ public class Database {
             if(accountNumber.compareTo(account.getAccountNumber()) == 0){
                 Scanner in = new Scanner(System.in);
                 System.out.print("Indtast beløb: ");
-                addAmount = in.nextInt();
+                addAmount = in.nextDouble();
                 double newBalance = account.getbalance() + addAmount;
                 return account.changeBalance(newBalance);
             }
@@ -35,9 +36,12 @@ public class Database {
         return 0;
     }
 
-    public double withdrawMoney(String accountNumber, double withdraw){
+    public double withdrawMoney(String accountNumber){
         for(Account account : database){
             if(accountNumber.compareTo(account.getAccountNumber()) == 0){
+                Scanner in = new Scanner(System.in);
+                System.out.println("Hæv beløb: ");
+                withdraw = in.nextDouble();
                 double newBalance = account.getbalance() - withdraw;
                 return account.changeBalance(newBalance);
             }

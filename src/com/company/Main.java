@@ -68,7 +68,7 @@ public class Main {
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:
-               database.withdrawMoney(accountNumber,withdraw);
+               database.withdrawMoney(accountNumber);
                menu(ownerName,accountNumber,balance);
                 break;
             case 3:
