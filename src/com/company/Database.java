@@ -31,13 +31,13 @@ public class Database {
         addAmount = in.nextDouble();
         for (Account account : database) {
             if (accountNumber.compareTo(account.getAccountNumber()) == 0) {
-                System.out.println(searchPerson(accountNumber));
                 double newBalance = account.getbalance() + addAmount;
                 return account.setbalance(newBalance);
             }
         } return 0;
     }
     public double withdrawMoney(String accountNumber){
+        System.out.println("Saldo: " + searchPerson(accountNumber));
         System.out.println("Hæv beløb: ");
         withdraw = in.nextDouble();
         for(Account account : database){
