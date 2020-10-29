@@ -11,8 +11,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        // write your code here
-
+        // write your code here3
 
         Main main = new Main();
         main.startProgram();
@@ -22,6 +21,8 @@ public class Main {
         database.add("Svend", "2711", 3500);
         database.add("Bent", "2945", 2700);
         database.add("Ballonshow", "4831", 4900);
+
+        database.printAll();
 
         Scanner in = new Scanner(System.in);
         System.out.println("Er du oprættet i systemet?");
@@ -43,15 +44,16 @@ public class Main {
                 balance = 1000 + random.nextInt(4000);
                 database.add(ownerName, accountNumber, balance);
                 menu(ownerName,accountNumber,balance);
-
                 break;
         }
     }
 
+
+
     public void menu(String ownerName, String accountNumber, double balance) {
 
         System.out.println("\nMenu:");
-        System.out.println("1: Indæt penge på din konto");
+        System.out.println("1: Indsæt penge på din konto");
         System.out.println("2. Hæv penge fra din konto");
         System.out.println("3. Overfør penge til en anden konto");
         System.out.println("9. Afslut program");
@@ -64,11 +66,11 @@ public class Main {
         switch (choice) {
 
             case 1:
-              database.addMoney(accountNumber,addAmount);
+             balance = balance + database.addMoney(accountNumber);
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:
-               database.withdrawMoney(accountNumber,withdraw);
+               database.withdrawMoney(accountNumber);
                menu(ownerName,accountNumber,balance);
                 break;
             case 3:
