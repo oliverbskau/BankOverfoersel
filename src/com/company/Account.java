@@ -2,14 +2,13 @@ package com.company;
 
 public class Account {
 
-    public static String setOwnerName;
     String accountNumber;
     String ownerName;
     double balance;
 
     public Account(String accountNumber, String ownerName, double balance){
-        this.ownerName = ownerName;
         this.accountNumber = accountNumber;
+        this.ownerName = ownerName;
         this.balance = balance;
     }
 
@@ -41,6 +40,7 @@ public class Account {
         this.balance = balance;
         return balance;
     }
+
     public String toString(){
         return this.ownerName + this.accountNumber + this.balance;
     }

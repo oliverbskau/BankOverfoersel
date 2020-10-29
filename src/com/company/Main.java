@@ -11,8 +11,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        // write your code here
-
+        // write your code here3
 
         Main main = new Main();
         main.startProgram();
@@ -45,12 +44,11 @@ public class Main {
                 balance = 1000 + random.nextInt(4000);
                 database.add(ownerName, accountNumber, balance);
                 menu(ownerName,accountNumber,balance);
-
-
-
                 break;
         }
     }
+
+
 
     public void menu(String ownerName, String accountNumber, double balance) {
 
