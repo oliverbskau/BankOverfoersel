@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Database {
 
     private ArrayList<Account> database = new ArrayList<Account>();
+    private double addAmount;
 
     public void add(String ownerName, String accountNumber,double balance){
         Account account = new Account(ownerName, accountNumber, balance);
@@ -21,7 +22,7 @@ public class Database {
         return 0;
     }
 
-    public double addMoney(String accountNumber, double addAmount){
+    public double addMoney(String accountNumber){
         for(Account account : database){
             if(accountNumber.compareTo(account.getAccountNumber()) == 0){
                 Scanner in = new Scanner(System.in);

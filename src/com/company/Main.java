@@ -43,6 +43,7 @@ public class Main {
                 balance = 1000 + random.nextInt(4000);
                 database.add(ownerName, accountNumber, balance);
                 menu(ownerName,accountNumber,balance);
+
                 break;
         }
     }
@@ -56,13 +57,14 @@ public class Main {
         System.out.println("9. Afslut program");
         System.out.print("Indtast tal: ");
 
+
         Scanner in = new Scanner(System.in);
         int choice = 0;
         choice = in.nextInt();
         switch (choice) {
 
             case 1:
-              database.addMoney(accountNumber,addAmount);
+              database.addMoney(accountNumber);
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:
