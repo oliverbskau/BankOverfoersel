@@ -34,8 +34,8 @@ public class Main {
                 ownerName = in.nextLine();
                 System.out.println("Indtast dit ønskede account nummer");
                 accountNumber = in.nextLine();
-
                 Random random = new Random();
+                balance = 1000+random.nextInt(5000);
 
                 database.add(ownerName, accountNumber, balance);
                 //menu();
