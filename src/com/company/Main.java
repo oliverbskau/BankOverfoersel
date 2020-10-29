@@ -23,6 +23,8 @@ public class Main {
         database.add("Bent", "2945", 2700);
         database.add("Ballonshow", "4831", 4900);
 
+        database.printAll();
+
         Scanner in = new Scanner(System.in);
         System.out.println("Er du oprættet i systemet?");
         System.out.print("ja/nej: ");
@@ -44,6 +46,8 @@ public class Main {
                 database.add(ownerName, accountNumber, balance);
                 menu(ownerName,accountNumber,balance);
 
+
+
                 break;
         }
     }
@@ -51,7 +55,7 @@ public class Main {
     public void menu(String ownerName, String accountNumber, double balance) {
 
         System.out.println("\nMenu:");
-        System.out.println("1: Indæt penge på din konto");
+        System.out.println("1: Indsæt penge på din konto");
         System.out.println("2. Hæv penge fra din konto");
         System.out.println("3. Overfør penge til en anden konto");
         System.out.println("9. Afslut program");
@@ -64,7 +68,7 @@ public class Main {
         switch (choice) {
 
             case 1:
-              database.addMoney(accountNumber);
+             balance = balance + database.addMoney(accountNumber);
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:
