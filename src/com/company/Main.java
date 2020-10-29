@@ -4,6 +4,11 @@ import java.util.Random;
 
 public class Main {
 
+    Database database = new Database();
+    public String ownerName;
+    public String accountNumber;
+    public double balance;
+
     public static void main(String[] args) {
 	// write your code here
 
@@ -26,10 +31,13 @@ public class Main {
 
             case "nej":
                 System.out.print("\nIndtast fulde navn: ");
-                Account.setOwnerName = in.nextLine();
+                ownerName = in.nextLine();
+                System.out.println("Indtast dit ønskede account nummer");
+                accountNumber = in.nextLine();
+
                 Random random = new Random();
 
-
+                database.add(ownerName, accountNumber, balance);
                 //menu();
                 break;
         }
@@ -53,7 +61,6 @@ public class Main {
                 break;
         }
     }
-
 
     public static void menu(){
 

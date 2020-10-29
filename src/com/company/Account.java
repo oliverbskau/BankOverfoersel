@@ -17,7 +17,7 @@ public class Account {
         return accountNumber;
     }
 
-    public void setAccountnumber(String newAccountNumber){
+    public void setAccountNumber(String newAccountNumber){
         this.accountNumber = newAccountNumber;
     }
 
@@ -36,4 +36,5 @@ public class Account {
     public void setbalance(double newbalance){
         this.balance = newbalance;
     }
+
 }
