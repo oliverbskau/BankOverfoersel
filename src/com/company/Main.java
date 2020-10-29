@@ -47,7 +47,7 @@ public class Main {
         }
     }
 
-    public static void menu(String ownerName, String accountNumber, double balance) {
+    public void menu(String ownerName, String accountNumber, double balance) {
 
         System.out.println("\nMenu:");
         System.out.println("1: Indæt penge på din konto");
@@ -62,37 +62,20 @@ public class Main {
         switch (choice) {
 
             case 1:
-              indsaetPenge(ownerName,accountNumber,balance);
+              database.addMoney(accountNumber,addAmount);
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:
-               haevPenge(ownerName,accountNumber,balance);
+               database.withdrawMoney(accountNumber,withdraw);
                menu(ownerName,accountNumber,balance);
                 break;
             case 3:
-                overfoerPenge(ownerName,accountNumber,balance);
+
                 menu(ownerName,accountNumber,balance);
                 break;
             case 9:
                 System.exit(0);
         }
     }
-
-public static void haevPenge(String ownerName, String accountName, double balance){
-    System.out.println("Hæv penge fra din konto");
-    System.out.println("Din saldo: " + balance);
-
-}
-
-public static void indsaetPenge(String ownerName, String accountName, double balance){
-    System.out.println("Indæt penge på din konto");
-
-}
-
-public static void overfoerPenge(String ownerName, String accountName, double balance){
-    System.out.println("Overfør penge til en anden konto");
-
-}
-
 }
 

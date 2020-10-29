@@ -1,5 +1,6 @@
 package com.company;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Database {
 
@@ -20,10 +21,13 @@ public class Database {
         return 0;
     }
 
-    public double addMoney(String accountNumber, double addamount){
+    public double addMoney(String accountNumber, double addAmount){
         for(Account account : database){
             if(accountNumber.compareTo(account.getAccountNumber()) == 0){
-                double newBalance = account.getbalance() + addamount;
+                Scanner in = new Scanner(System.in);
+                System.out.print("Indtast beløb: ");
+                addAmount = in.nextInt();
+                double newBalance = account.getbalance() + addAmount;
                 return account.changeBalance(newBalance);
             }
         }
