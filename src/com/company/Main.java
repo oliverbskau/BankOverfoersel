@@ -43,12 +43,12 @@ public class Main {
                 balance = 1000 + random.nextInt(4000);
                 database.add(ownerName, accountNumber, balance);
                 menu(ownerName,accountNumber,balance);
-                break;
 
+                break;
         }
     }
 
-    public static void menu(String ownerName, String accountNumber, double balance) {
+    public void menu(String ownerName, String accountNumber, double balance) {
 
         System.out.println("\nMenu:");
         System.out.println("1: Indæt penge på din konto");
@@ -57,43 +57,27 @@ public class Main {
         System.out.println("9. Afslut program");
         System.out.print("Indtast tal: ");
 
+
         Scanner in = new Scanner(System.in);
         int choice = 0;
         choice = in.nextInt();
         switch (choice) {
 
             case 1:
-              indsaetPenge(ownerName,accountNumber,balance);
+              database.addMoney(accountNumber,addAmount);
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:
-               haevPenge(ownerName,accountNumber,balance);
+               database.withdrawMoney(accountNumber,withdraw);
                menu(ownerName,accountNumber,balance);
                 break;
             case 3:
-                overfoerPenge(ownerName,accountNumber,balance);
+
                 menu(ownerName,accountNumber,balance);
                 break;
             case 9:
                 System.exit(0);
         }
     }
-
-public static void haevPenge(String ownerName, String accountName, double balance){
-    System.out.println("Hæv penge fra din konto");
-    System.out.println("Din saldo: " + balance);
-
-}
-
-public static void indsaetPenge(String ownerName, String accountName, double balance){
-    System.out.println("Indæt penge på din konto");
-
-}
-
-public static void overfoerPenge(String ownerName, String accountName, double balance){
-    System.out.println("Overfør penge til en anden konto");
-
-}
-
 }
 
