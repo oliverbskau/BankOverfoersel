@@ -9,14 +9,20 @@ public class Main {
     public String accountNumber;
     public double balance;
 
+
     public static void main(String[] args) {
         // write your code here
+
 
         Main main = new Main();
         main.startProgram();
     }
 
     public void startProgram() {
+        database.add("Svend", "2711", 3500);
+        database.add("Bent", "2945", 2700);
+        database.add("Ballonshow", "4831", 4900);
+
         Scanner in = new Scanner(System.in);
         System.out.println("Er du oprættet i systemet?");
         System.out.print("ja/nej: ");
