@@ -43,7 +43,7 @@ public class Database {
         for(Account account : database){
             if(accountNumber.compareTo(account.getAccountNumber()) == 0){
                 double newBalance = account.getbalance() - withdraw;
-                return newBalance;
+                return account.setbalance(newBalance);
             }
         }
         return 0;

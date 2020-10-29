@@ -67,10 +67,12 @@ public class Main {
 
             case 1:
              database.addMoney(accountNumber);
+             database.searchPerson(accountNumber);
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:
                database.withdrawMoney(accountNumber);
+               database.searchPerson(accountNumber);
                menu(ownerName,accountNumber,balance);
                 break;
             case 3:
