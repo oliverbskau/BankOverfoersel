@@ -30,6 +30,7 @@ public class Database {
                 double newBalance = account.getbalance() + addAmount;
                 return account.changeBalance(newBalance);
             }
+            System.out.println("Din nye balance er: " + account.getbalance());
         }
         return 0;
     }
