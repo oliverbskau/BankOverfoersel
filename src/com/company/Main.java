@@ -66,7 +66,7 @@ public class Main {
         switch (choice) {
 
             case 1:
-             balance = balance + database.addMoney(accountNumber);
+             database.addMoney(accountNumber);
               menu(ownerName,accountNumber,balance);
                 break;
             case 2:

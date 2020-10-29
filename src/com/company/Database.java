@@ -36,6 +36,7 @@ public class Database {
                 return account.changeBalance(newBalance);
             }
         }
+
         return 0;
     }
 
