@@ -28,10 +28,30 @@ public class Main {
                 System.out.print("\nIndtast fulde navn: ");
                 Account.setOwnerName = in.nextLine();
                 Random random = new Random();
-                Account.setBalance = 1000+random.nextDouble();
+
+
+                //menu();
                 break;
         }
 
+        choice = in.nextInt();
+        switch(choice){
+
+            case 1:
+                System.out.println("Indæt penge på din konto");
+
+                break;
+
+            case 2:
+                System.out.println("Hæv penge fra din konto");
+
+                break;
+
+            case 3:
+                System.out.println("Overfør penge til en anden konto");
+
+                break;
+        }
     }
 
 
