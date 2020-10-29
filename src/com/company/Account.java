@@ -36,4 +36,9 @@ public class Account {
     public void setbalance(double newbalance){
         this.balance = newbalance;
     }
+
+    public double changeBalance(double newbalance){
+        this.balance = newbalance;
+        return newbalance;
+    }
 }
